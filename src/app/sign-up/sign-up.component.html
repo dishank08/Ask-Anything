@@ -1,0 +1,21 @@
+<app-content></app-content>
+<div class="bg-modal" style="display:flex;">
+	<div class="modal-content w3-black my-animate-zoom">
+	   <form id='signup-form' #signup="ngForm" (ngSubmit)=onSubmit(signup) >
+		<a class="close" routerLink="/" routerLinkActive="active">+</a>
+		  <div class="text-center">
+			 <img src="../../assets/images/user.png" style="width:130px;"><br><br>
+		  </div>
+		  <input type="text" placeholder="First Name" style="width: 47%" required="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="fname">
+		  <input type="text" placeholder="Last Name" class="my-right" style="width: 47%" required="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="lname">
+		  <input type="text" placeholder="Username" required="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="username">
+		  <input type="password" class="pass" placeholder="Password" required="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="password">
+		  <input type="password"  placeholder="Re Password"  required="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="cpassword">
+		  <input type="checkbox" required="true" class="my-check" style="margin-bottom:15px; height:20px;"/> I agreed with terms and conditions.<br>
+		  <button  type="submit" class="my-button my-light-green">Register</button>
+      <p class="my-right" >Already Account ? <a id='form-switch' class="my-text-red my-medium my-hover-text-blue-gray"
+        routerLink="/login" routerLinkActive="active" >Sign In</a></p>
+     </form>
+     
+	</div>
+</div>

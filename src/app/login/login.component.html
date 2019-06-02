@@ -1,0 +1,22 @@
+<app-content></app-content>
+<div class="bg-modal" style="display:flex;">
+	<div class="modal-content w3-black my-animate-zoom">
+	   <form #data="ngForm" (ngSubmit)=onSubmit(data)>
+
+		  <a class="close" routerLink="/" routerLinkActive="active">+</a>
+		  
+		  <div class="text-center">
+			<img src="../../assets/images/user.png" style="width:130px;"><br><br>
+		 </div>
+		 
+		  <input type="text"  placeholder="Username" required="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="username">
+		  <input type="password" [(ngModel)]="password" id="pass"  placeholder="Password" style="margin-bottom:10px;" required="true" data-toggled="password" [ngModelOptions]="{standalone: true}">
+		  <span toggle="#pass" id="icon" class="fa fa-fw fa-eye icon" style="display:none;"></span><br>
+		  <button  type="submit" class="my-button my-light-green" > login </button>
+		  <p class="my-right ">New One ? <a routerLink="/signup" routerLinkActive="active" class="my-text-red my-medium my-hover-text-blue-gray">Register</a></p>
+		
+	   </form>
+	</div>
+ </div>
+
+		
